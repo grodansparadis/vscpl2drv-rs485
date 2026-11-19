@@ -31,9 +31,9 @@
 */
 #define VSCPL2DRV_RS485_MAJOR_VERSION 2026
 #define VSCPL2DRV_RS485_MINOR_VERSION 11
-#define VSCPL2DRV_RS485_PATCH_VERSION 9
+#define VSCPL2DRV_RS485_PATCH_VERSION 10
 
-#define VSCPL2DRV_RS485_DISPLAY_VERSION "2026.11.9"
+#define VSCPL2DRV_RS485_DISPLAY_VERSION "2026.11.10"
 
 #define VSCPL2DRV_RS485_COPYRIGHT                                           \
   "Copyright (C) 2000-2026 Ake Hedman and contributors, the VSCP project, "    \
