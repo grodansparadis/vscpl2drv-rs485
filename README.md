@@ -55,16 +55,33 @@ sample is *resources/linux/rs485.json*.
 
 ## Build
 
+On Debian or Ubuntu, install the build tools and system libraries:
+
 ```bash
-./build-unix.sh
+sudo apt update
+sudo apt install build-essential cmake libssl-dev libexpat1-dev
 ```
 
-or see [docs/build.md](./docs/build.md) for details and Windows instructions.
+Configure and build a Release version:
 
-Requirements on Linux: `build-essential cmake libssl-dev libexpat1-dev` (and optionally `pandoc` for the man page). Everything else is fetched automatically by CMake.
+```bash
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+cmake --build build --parallel
+```
 
-Run the test (Linux, macOS) with `ctest --test-dir build`; it loads the
-driver like the VSCP daemon and runs it against simulated nodes.
+CMake fetches the VSCP common code, spdlog and nlohmann/json automatically.
+The driver library is written to `build/` (`libvscpl2drv-rs485.so` on Linux
+or `.dylib` on macOS). To build the man page as well, install `pandoc` before
+configuring.
+
+Run the test on Linux or macOS with:
+
+```bash
+ctest --test-dir build --output-on-failure
+```
+
+For macOS prerequisites, Windows setup and build options, see
+[docs/build.md](./docs/build.md).
 
 ## Documentation
 
