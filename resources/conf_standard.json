@@ -1,0 +1,29 @@
+{
+    "debug": true,
+    "write": false,
+    "device": "/dev/ttyUSB0",
+    "baudrate": 115200,
+    "addresses": "1-127",
+    "poll-timeout": 20,
+    "discovery-rounds": 1,
+    "miss-limit": 3,
+    "nine-bit": true,
+    "fixed-length": false,
+    "crc": "dow",
+    "broadcast": false,
+    "kernel-rs485": false,
+    "rts-direction": false,
+    "rx-filter": "0,0,0,-,0,0,0,-",
+    "max-queue-size": 1000,
+    "logging": {
+        "console-enable-log": true,
+        "console-log-level": "info",
+        "console-pattern": "[vscpl2drv-rs485 %c] [%^%l%$] %v",
+        "file-enable-log": true,
+        "file-log-level": "debug",
+        "file-pattern": "[vscpl2drv-rs485 %c] [%^%l%$] %v",
+        "file-path": "/tmp/vscpl2drv-rs485.log",
+        "file-max-size": 5242880,
+        "file-max-files": 7
+    }
+}

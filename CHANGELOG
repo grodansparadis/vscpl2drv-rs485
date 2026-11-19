@@ -1,0 +1,4 @@
+Change log for vscpl2drv-rs485
+=================================
+
+261119 AKHE First version: RS-485 bus master (VSCP Level I over RS-485/RS-422), from vscpl2drv-template
